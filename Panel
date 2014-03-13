@@ -1,0 +1,41 @@
+/*This was just a bit of experimentation with a
+ *button to add text to a text field
+ *and then another button to change the text field
+ *other text */
+ 
+import javax.swing.*;
+import java.awt.event.*;
+
+public class Panel extends JPanel
+{
+	private JButton Button, ResetButton;
+	private JTextField TField;
+	
+	public Panel()
+	{
+		Button = new JButton ( "Hit for Wax" );
+		Button.addActionListener( new Handler() );
+		
+		ResetButton = new JButton( "Hit for Wax off!" );
+		ResetButton.addActionListener( new ResetHandler() );
+		
+		TField = new JTextField( 10 );
+		add( Button );
+		add( TField );
+		add( ResetButton );
+			}
+	class Handler implements ActionListener
+	{
+		public void actionPerformed( ActionEvent B )
+		{
+			TField.setText( "Wax on!" );
+		}
+	}
+	class ResetHandler implements ActionListener
+	{
+		public void actionPerformed( ActionEvent B)
+		{
+			TField.setText( "Wax off!" );
+		}
+	}
+}
