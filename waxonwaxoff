@@ -1,0 +1,21 @@
+/*This was just a bit of experimentation with a
+ *button to add text to a text field
+ *and then another button to change the text field
+ *other text */
+ 
+import javax.swing.*;
+import java.awt.event.*;
+
+public class Waxonwaxoff extends JFrame
+{
+	public static void main ( String args[] )
+	{
+		JFrame frame = new Waxonwaxoff();
+		frame.setSize( 400, 200 );
+		frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
+		frame.setTitle( "Mr Miyagi says:" );
+		JPanel Panel = new Panel();
+		frame.setContentPane( Panel );
+		frame.setVisible( true );
+	}
+}
